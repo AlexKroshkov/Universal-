@@ -1,0 +1,117 @@
+.book
+  &__container
+    margin-top: 69px
+  &__author
+    font-family: "Roboto", sans-serif
+    font-style: normal
+    font-weight: 500
+    font-size: 20px
+    text-transform: uppercase
+    margin-bottom: 36px
+    letter-spacing: 0.2px
+    margin-top: 0
+    color: #183B56
+
+  &__info
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+  &__text
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    width: 600px
+    padding-top: 43px
+    &-about
+      font-style: normal
+      font-weight: normal
+      font-size: 18px
+      line-height: 32px
+      color: #5A7184
+      margin-bottom: 60px
+      margin-top: 0
+
+  &__title
+    font-family: 'Roboto', sans-serif
+    font-style: normal
+    font-weight: 700
+    font-size: 48px
+    line-height: 60px
+    letter-spacing: 0.3px
+    margin-bottom: 32px
+    margin-top: 0
+    color: $primary
+
+    &-color
+      color: #faad13
+      display: block
+
+  &__button
+    border: 2px solid #1565d8
+    border-radius: 8px
+    text-align: center
+    background-color: #1565d8
+    min-width: 209px
+    min-height: 58px
+    padding: 16px
+    text-transform: uppercase
+    font-style: normal
+    font-weight: bold
+    font-size: 16px
+    line-height: 22px
+    color: #fff
+    margin-right: 26px
+    cursor: pointer
+    
+
+    &-wrapper
+      display: flex
+      justify-content: flex-start
+      align-items: start
+
+  &__read
+    border: 2px solid #1565d8
+    border-radius: 8px
+    text-align: center
+    background-color: #fff
+    min-width: 234px
+    min-height: 58px
+    padding: 14px
+    text-transform: uppercase
+    font-style: normal
+    font-weight: bold
+    font-size: 18px
+    line-height: 25px
+    color: #1565d8
+    text-decoration: none
+
+  &__image
+    background-color: rgba(179, 186, 197, 0.1)
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 488px
+    min-height: 580px
+    margin-left: 119px
+
+    &-book
+      width: 250px
+      height: auto
+      object-fit: cover
+
+    &-cover
+      width: 250px
+      height: 374px
+      position: relative
+      &::after
+        content: ''
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        background: rgba(0, 0, 0, 0.0001)
+        box-shadow: 0px 20px 24px rgba(0, 0, 0, 0.08)
+        z-index: 12
