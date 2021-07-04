@@ -2,20 +2,20 @@
   background-color: #183b56
 
   &__container
-    padding: 62px 0 81px 2px
+    padding: 62px 0 81px 32px
     position: relative
-    margin-bottom: 103px
 
   &__title
     font-family: "Roboto", sans-serif
     font-style: normal
     font-weight: bold
-    font-size: 36px
+    font-size: 31px
     line-height: 48px
     letter-spacing: 0.2px
     color: #fff
     margin-bottom: 60px
     margin-top: 0
+    margin-left: -11px
 
   &__wrapper
     &-top
@@ -32,14 +32,26 @@
       height: 56px
 
   &__button
-    width: 56px
+    position: absolute
+    text-align: center
+    z-index: 100
+    opacity: 1
+    width: 54px
     height: 56px
-    border: 2px solid #fff
-    border-radius: 2000px
-    padding: 18px
-    background-color: transparent
-    display: block
+    border-radius: 50%
     cursor: pointer
+    border: 2px solid #FFFFFF
+    border-radius: 2000px
+
+    &--prev
+      background: url(../images/arrow-left.svg) no-repeat center
+      top: 11%
+      right: 5%
+
+    &--next
+      background: url(../images/arrow-right.svg) no-repeat center
+      top: 11%
+      right: -2%
 
 .slide
   &-unedited

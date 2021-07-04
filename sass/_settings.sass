@@ -1,23 +1,55 @@
 *
   box-sizing: border-box
-body
   margin: 0
   padding: 0
-  font-family: 'Open Sans', sans-serif
-  background-color: #ffffff
-img
-  object-fit: cover
+
+body
+  font-family: "Open Sans", sans-serif
+  color: #183b56
+  position: relative
+  overflow-x: hidden
+
+.body__no-scroll
+  overflow: hidden
+  padding-right: 17px
+
+a
+  text-decoration: none
+  color: inherit
+
+a,
+button
+  cursor: pointer
+  outline: none
+
 .container
   max-width: 1140px
   margin: 0 auto
   width: 100%
 
-ul
-  list-style-type: none
+.invalid
+  color: #ff9f9f
+  font-style: normal
+  font-weight: 600
+  font-size: 14px
+  line-height: 15px
+  position: absolute
+  top: -32%
 
-li
-  text-decoration: none
+.error
+  color: #ff9f9f
+  font-style: normal
+  font-weight: 600
+  font-size: 14px
+  line-height: 15px
+
+img
+  max-width: 100%
+
+.button
+  cursor: pointer
 
 textarea:focus,
-input:focus
+input:focus,
+button:focus
   outline: none

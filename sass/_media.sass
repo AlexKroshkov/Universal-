@@ -1,0 +1,108 @@
+@media (max-width: 1200px)
+  .container
+    max-width: 960px
+
+  .main-offer
+    &__title
+      font-size: 42px
+      line-height: 52px
+
+    &__subtitle
+      font-size: 16px
+      line-height: 20px
+
+    &__button
+      margin-right: 10px
+
+  .main-image
+    padding: 70px 85px
+
+@media (max-width: 992px)
+  .container
+    max-width: 85vw
+
+  .navbar
+    &__container
+      margin-bottom: 0
+
+@media (max-width: 767px)
+  body
+    padding-top: 100px
+
+  .navbar
+    &__wrapper
+      padding: 26px 0
+
+    &-fixed
+      position: fixed
+      left: 0
+      top: 0
+      background-color: #fff
+      width: 100vw
+      z-index: 98
+
+    &__button
+      display: none
+
+    &__menu
+      display: none
+      position: fixed
+      left: 0
+      right: 0
+      top: 80px
+      bottom: 0
+      background-color: #959ead
+      opacity: 0.96
+      min-height: 100vh
+      overflow: auto
+
+      &--visible
+        display: block
+
+  .navbar-menu
+    width: 100%
+    height: 300px
+    padding-top: 35px
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+
+    &__item
+      margin-bottom: 15px
+      margin-right: 0
+
+      &:last-child
+        margin-bottom: 0
+
+      &__link
+        font-family: "Roboto", sans-serif
+        font-style: normal
+        font-weight: 500
+        color: #fff
+        font-size: 18px
+        line-height: 20px
+        text-align: center
+        letter-spacing: 0.3px
+
+  .menu-button
+    display: block
+    border: none
+    padding: 0
+    background-color: #fff
+    cursor: pointer
+
+@media (max-width: 640px)
+  .container
+    max-width: 90vw
+
+  .navbar
+    &__mobile
+      &-fixed
+        left: 3.5%
+
+    &__wrapper
+      width: 90vw
+
+  .navbar__menu
+    top: 80px
