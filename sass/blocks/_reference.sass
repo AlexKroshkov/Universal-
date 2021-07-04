@@ -1,196 +1,247 @@
-.advice
-  padding-top: 90px
-  margin-bottom: 140px
-  background-color: #fff
-
-  &-wrapper
+.reference
+  &__container
     display: flex
-    align-items: center
+    justify-content: space-between
+    margin-bottom: 79px
+
+  &__offer
+    width: 751px
+
+  &__top
+    width: 360px
+    display: flex
+    flex-direction: column
 
   &__title
-    font-family: 'Roboto', sans-serif
+    font-family: "Roboto", sans-serif
     font-style: normal
     font-weight: bold
     font-size: 32px
     line-height: 40px
     letter-spacing: 0.2px
-    color: #183B56
-    margin-top: 0
-
-  &-offer
-    width: 751px
-    margin-right: 32px
-
-    &__button
-      width: 100%
-      min-height: 72px
-      padding-top: 25px
-      padding-bottom: 27px
-      color: #1565D8
-      background-color: rgba(21,101,216,0.1)
-      text-transform: uppercase
-      border: none
-      border-radius: 8px
-      font-family: 'Roboto', sans-serif
-      font-style: normal
-      font-weight: bold
-      font-size: 16px
-      line-height: 20px
-      text-align: center
-      letter-spacing: 0.2px
-      cursor: pointer
-
-    &__title
-      margin-bottom: 30px
-      margin-top: 0
-
-    &__cards
-      display: flex
-      align-items: center
-      justify-content: space-between
-      flex-wrap: wrap
-
-    &__card
-      display: flex
-      width: 358px
-      height: 260px
-      padding: 11px
-      border: 1px solid #ECEEF2
-      border-radius: 8px
-      margin-bottom: 32px
-
-      &__text
-        width: 152px
-        padding-top: 13px
-
-      &__title
-        font-family: 'Roboto', sans-serif
-        font-style: normal
-        font-weight: 500
-        font-size: 22px
-        line-height: 32px
-        letter-spacing: 0.2px
-        color: #183B56
-        margin-bottom: 16px
-        margin-top: 0
-
-      &__subtitle
-        font-style: normal
-        font-weight: normal
-        font-size: 16px
-        line-height: 22px
-        color: #183B56
-        display: block
-        margin-bottom: 24px
-
-      &__price
-        font-family: 'Roboto', sans-serif
-        font-style: normal
-        font-weight: bold
-        font-size: 20px
-        line-height: 24px
-        letter-spacing: 0.2px
-        color: #1565D8
-        display: block
-        margin-bottom: 24px
-
-      &__button
-        font-style: normal
-        font-weight: bold
-        font-size: 16px
-        line-height: 22px
-        background-color: #183B56
-        padding: 7px 20px
-        border-radius: 2000px
-        color: #fff
-        border: none
-        outline: none
-        margin-right: 23px
-        cursor: pointer
-
-      &__image
-        object-fit: cover
-        width: 160px
-        height: 238px
-        border-radius: 8px
-        margin-right: 17px
-
-        &__work
-          padding-top: 11px
-
-.advice-top
-  width: 360px
-
-  &__title
+    color: #183b56
     margin-bottom: 30px
-    margin-top: 0
 
   &__cards
-    padding: 24px 0px 0 0px
-    border-radius: 8px
-    background-color: rgba(179, 186, 197, 0.1)
+    display: flex
+    justify-content: space-between
+    align-content: space-between
+    flex-wrap: wrap
 
   &__card
-    height: 178px
-    padding: 0 24px
-    display: flex
-    margin-bottom: 36px
+    padding: 11px
 
-    &__image
-      width: 119px
-      height: 177px
-      margin-right: 26px
+    &--mb
+      margin-bottom: 32px
 
-    &__text
-      padding-top: 9px
+  &__link
+    font-family: "Roboto", sans-serif
+    font-style: normal
+    font-weight: bold
+    font-size: 16px
+    line-height: 20px
+    letter-spacing: 0.2px
+    color: #1565d8
+    display: block
+    text-align: center
+    text-transform: uppercase
+    background-color: rgba(21, 101, 216, 0.1)
+    border-radius: 8px
+    padding: 25px
+    min-height: 72px
+    flex-basis: 100%
+    margin-top: 27px
 
-    &__title
-      font-family: 'Roboto', sans-serif
-      font-style: normal
-      font-weight: 500
-      font-size: 22px
-      line-height: 32px
-      letter-spacing: 0.2px
-      color: #183B56
-      margin-bottom: 15px
-      margin-top: 0
-
-    &__price
-      display: block
-      font-family: 'Roboto', sans-serif
-      font-style: normal
-      font-weight: bold
-      font-size: 20px
-      line-height: 24px
-      letter-spacing: 0.2px
-      color: #1565D8
-      margin-bottom: 22px
-
-    &__button
-      font-style: normal
-      font-weight: bold
-      font-size: 16px
-      line-height: 22px
-      background-color: #183B56
-      padding: 7px 20px
-      border-radius: 2000px
-      color: #fff
-      border: none
-      outline: none
-      margin-right: 25px
-      cursor: pointer
-
-    &__link
-      display: block
-      text-decoration: none
-      text-transform: uppercase
-      font-family: 'Roboto', sans-serif
+    &-top
+      font-family: "Roboto", sans-serif
       font-style: normal
       font-weight: bold
       font-size: 16px
       line-height: 20px
-      text-align: center
       letter-spacing: 0.2px
-      color: #1565D8
-      border-top: 1px solid #ECEEF2
-      padding: 15px 0 29px 0
+      color: #1565d8
+      display: block
+      text-align: center
+      text-transform: uppercase
+      padding: 25px
+      min-height: 72px
+      width: 85%
+      border-top: 1px solid #eceef2
+
+  &__list
+    background-color: rgba(179, 186, 197, 0.1)
+    border: none
+    border-radius: 8px
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 100%
+    height: 100%
+
+    &-top
+      list-style-type: none
+      padding: 24px 20px 26px 24px
+
+  &__item
+    width: 312px
+    min-height: 178px
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    &--mb
+      margin-bottom: 36px
+
+.card-reference
+  border: 1px solid #eceef2
+  border-radius: 8px
+  width: 358px
+  height: 260px
+  display: flex
+  align-items: center
+
+  &__image
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+    &-wrapper
+      width: 160px
+      height: 238px
+      border: none
+      border-radius: 8px
+      overflow: hidden
+
+  &__heart
+    background-color: transparent
+    border: none
+    width: 22px
+    height: 22px
+    display: block
+
+    &-img
+      margin-top: auto
+      width: 22px
+      height: 21px
+      fill: #959ead
+
+      &--active
+        fill: #ff2a2a
+
+  &__title
+    font-family: "Roboto", sans-serif
+    font-style: normal
+    font-weight: 500
+    font-size: 22px
+    line-height: 32px
+    letter-spacing: 0.2px
+
+  &__genre
+    display: block
+    font-style: normal
+    font-weight: normal
+    font-size: 16px
+    line-height: 22px
+    margin-left: 1px
+    margin-bottom: 10px
+
+  &__price
+    font-family: "Roboto", sans-serif
+    font-style: normal
+    font-weight: bold
+    font-size: 20px
+    line-height: 24px
+    letter-spacing: 0.2px
+    color: #1565d8
+    margin-left: 1px
+    margin-bottom: 10px
+
+  &__buy
+    display: block
+    width: 101px
+    min-height: 36px
+    border: none
+    background: #183b56
+    border-radius: 2000px
+    padding: 7px 20px
+    text-decoration: none
+    color: #fff
+    font-size: 16px
+    line-height: 22px
+    text-align: center
+
+  &__button
+    &-wrapper
+      display: flex
+      justify-content: space-between
+      align-items: center
+      max-width: 144px
+
+  &__info
+    &-wrapper
+      width: 160px
+      height: 210px
+      overflow: auto
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      margin-left: 18px
+
+.item-reference
+  &__title
+    font-family: "Roboto", sans-serif
+    font-style: normal
+    font-weight: 500
+    font-size: 22px
+    line-height: 32px
+    letter-spacing: 0.2px
+    margin-left: 1px
+    margin-bottom: 10px
+
+  &__image
+    width: 100%
+    height: auto
+    object-fit: cover
+
+    &-wrapper
+      width: 120px
+      height: 178px
+      border: none
+      border-radius: 6px
+      overflow: hidden
+
+  &__price
+    font-family: "Roboto", sans-serif
+    font-style: normal
+    font-weight: bold
+    font-size: 20px
+    line-height: 24px
+    letter-spacing: 0.2px
+    color: #1565d8
+    margin-left: 1px
+    margin-bottom: 10px
+
+  &__buy
+    display: block
+    width: 101px
+    min-height: 36px
+    border: none
+    background: #183b56
+    border-radius: 2000px
+    padding: 7px 20px
+    text-decoration: none
+    color: #fff
+    text-align: center
+    font-style: normal
+    font-weight: bold
+    font-size: 16px
+    line-height: 22px
+
+  &__info
+    &-wrapper
+      width: 168px
+      height: 160px
+      overflow: auto
+      display: flex
+      flex-direction: column
+      justify-content: space-between
