@@ -7,7 +7,7 @@ body
   font-family: "Open Sans", sans-serif
   color: #183b56
   position: relative
-
+  scroll-behavior: smooth
 
 a
   text-decoration: none
@@ -24,26 +24,27 @@ button
   width: 100%
 
 .invalid
-  color: #ff9f9f
   font-style: normal
-  font-weight: 600
-  font-size: 14px
-  line-height: 15px
-  position: absolute
-  top: -32%
-
-.error
-  color: #ff9f9f
-  font-style: normal
-  font-weight: 600
-  font-size: 14px
-  line-height: 15px
+  font-weight: 300
+  font-size: 12px
+  line-height: 18px
+  color: #EC1F46
+  flex-basis: 100%
 
 img
   max-width: 100%
 
 .button
   cursor: pointer
+
+label
+  &.invalid
+    position: absolute
+    left: 0
+    bottom: -14px
+    font-size: 11px
+    line-height: 15px
+    margin-left: 5px
 
 textarea:focus,
 input:focus,

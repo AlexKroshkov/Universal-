@@ -2,14 +2,14 @@ $(document).ready(function () {
   //Слайдер 1
 
   var themeSlider = new Swiper(".slider-theme__container", {
-    
+
     slidesPerColumnFill: 'row',
     loop: false,
     navigation: {
       nextEl: ".slide-button--next",
       prevEl: ".slide-button--prev"
-    },  
-    
+    },
+
     simulateTouch: true,
     grabCursor: true,
     keyboard: {
@@ -17,27 +17,27 @@ $(document).ready(function () {
       onlyInViewport: true,
       pageUpDown: true,
     },
-    
-    breakpoints: {
-      320: {slidesPerView: 2, slidesPerColumn: 2},
-      510: {slidesPerView: 3, slidesPerColumn: 2},      
-      767: {slidesPerView: 3, slidesPerColumn: 1, spaceBetween: 0},
-      1200: {slidesPerView: 4, slidesPerColumn: 1, spaceBetween: 27}
-    },
-    
-});
 
-//Слайдер 2
-var reviewsSlider = new Swiper(".slider-unedited__container", {
-  
-  loop: false,
-  navigation: {
-    nextEl: ".unedited__button--next",
-    prevEl: ".unedited__button--prev",
-  },
-  slidesPerView: 5,
+    breakpoints: {
+      320: { slidesPerView: 2, slidesPerColumn: 2 },
+      510: { slidesPerView: 3, slidesPerColumn: 2 },
+      767: { slidesPerView: 3, slidesPerColumn: 1, spaceBetween: 0 },
+      1200: { slidesPerView: 4, slidesPerColumn: 1, spaceBetween: 27 }
+    },
+
+  });
+
+  //Слайдер 2
+  var reviewsSlider = new Swiper(".slider-unedited__container", {
+
+    loop: false,
+    navigation: {
+      nextEl: ".unedited__button--next",
+      prevEl: ".unedited__button--prev",
+    },
+    slidesPerView: 5,
     spaceBetween: 30,
-    
+
     simulateTouch: true,
     grabCursor: true,
     keyboard: {
@@ -45,163 +45,119 @@ var reviewsSlider = new Swiper(".slider-unedited__container", {
       onlyInViewport: true,
       pageUpDown: true,
     },
-    
-    breakpoints: {
-      200: {slidesPerView: 1},
-      480: {slidesPerView: 2, spaceBetween: 25},
-      767: {slidesPerView: 3},
-      992: {slidesPerView: 4},
-      1200: {slidesPerView: 5}
-    },
-});
 
-//мобильное меню
-var menuButton = $(".menu-button");
-  menuButton.on("click", function () {  
+    breakpoints: {
+      200: { slidesPerView: 1 },
+      480: { slidesPerView: 2, spaceBetween: 25 },
+      767: { slidesPerView: 3 },
+      992: { slidesPerView: 4 },
+      1200: { slidesPerView: 5 }
+    },
+  });
+
+  //мобильное меню
+  var menuButton = $(".menu-button");
+  menuButton.on("click", function () {
     $(".navbar__menu").toggleClass("navbar__menu--visible");
     $("body").toggleClass("body__no-scroll");
-});  
+  });
 
-//модальное окно
+  //модальное окно
   var modalButton = $("[data-toggle=modal]");
   var closeModalButton = $(".modal__close");
   modalButton.on("click", openModal);
   closeModalButton.on("click", closeModal);
 
+  document.addEventListener("keydown", function (event) {
+    if (event.key == "Escape") {
+      closeModal(event);
+    }
+  });
+
   function openModal() {
-    var targetModal = $(this).attr("data-href");    
-    $(targetModal).find(".modal__overlay").addClass("modal__overlay--visible");
-    $(targetModal).find(".modal__dialog").addClass("modal__dialog--visible");
-    $("body").addClass("body__no-scroll");
-  };
-  
+    var modalOverlay = $(".modal__overlay");
+    var modalDialog = $(".modal__dialog");
+    modalOverlay.addClass("modal__overlay--visible");
+    modalDialog.addClass("modal__dialog--visible");
+  }
+
   function closeModal(event) {
     event.preventDefault();
     var modalOverlay = $(".modal__overlay");
     var modalDialog = $(".modal__dialog");
     modalOverlay.removeClass("modal__overlay--visible");
     modalDialog.removeClass("modal__dialog--visible");
-    $("body").removeClass("body__no-scroll");
-  }; 
+  }
 
-  $(".modal").on("click", function() {    
-    var modalOverlay = $(".modal__overlay");
-    var modalDialog = $(".modal__dialog");
-    modalOverlay.removeClass("modal__overlay--visible");
-    modalDialog.removeClass("modal__dialog--visible");
-    $("body").removeClass("body__no-scroll");
-  });
 
-  $(".modal__dialog").on("click", function(event) {    
-    event.stopPropagation();
-  });
-
-  document.onkeydown = function(evt) {
-      evt = evt || window.event;
-      var isEscape = false;
-      if ("key" in evt) {
-          isEscape = (evt.key === "Escape" || evt.key === "Esc");
-      } else {
-          isEscape = (evt.keyCode === 27);
-      }
-      if (isEscape) {
-          $(".modal__overlay").removeClass("modal__overlay--visible");
-          $(".modal__dialog").removeClass("modal__dialog--visible");
-          $("body").removeClass("body__no-scroll");
-      } 
-  };
-
-  // Обработка формы отправки
-    $(".phone").mask("+7(000) 000-00-00");
-
-    $(".form").each(function() {
-      $(this).validate({
-      errorClass: "error",      
+  $(".form").each(function () {
+    $(this).validate({
+      errorClass: "invalid",
       messages: {
         name: {
           required: "Пожалуйста, введите свое имя",
           minlength: "Слишком короткое имя",
         },
         email: {
-          required: "Напишите ваш email и мы Вам ответим!",
-          email: "Введите ваш email в формате name@domain.com",
+          required: "Напишите ваш email",
+          email: "Формат должен быть name@domain.com.",
         },
         phone: {
           required: "Пожалуйста, введите номер телефона",
-          minlength: "Запишите телефон в виде +7(000) 000-00-00",
+          minlength: "Формат должен быть +7 (000) 000-00-00",
         },
       },
     });
+  });
+  $(document).ready(function () {
+    $(".phone").mask("+7 (000) 000-00-00");
+  });
+
+
+  //видео
+  var player;
+  $(".video__play-big").on("click", function onYouTubeIframeAPIReady() {
+    player = new YT.Player("player", {
+      height: "380",
+      width: "100%",
+      videoId: "QanMwxVsg18",
+      events: {
+        "onReady": videoPlay,
+      }
     });
+  })
 
-    $(".subscription__form").validate({
-      errorClass: "invalid",
-      messages: {        
-        email: {
-          required: "Напишите ваш email, и мы Вам ответим",
-          email: "Введите ваш email в формате name@domain.com",
-        },        
-      }    
-    });
+  function videoPlay(event) {
+    event.target.playVideo();
+  }
 
-//видео
-      var player;
-        $(".video__play-big").on("click", function onYouTubeIframeAPIReady() {
-        player = new YT.Player("player", {
-          height: "380",
-          width: "100%",
-          videoId: "QanMwxVsg18",
-          events: {
-            "onReady": videoPlay,
-          }
-        });
-      })
+// ***********
+//* scroll to anchor link
+// ***********
+$('nav a[href]').click(scrollToAnchor)
 
-    function videoPlay(event) {
-      event.target.playVideo();
-    }
+function scrollToAnchor(e) {
+  const anchor = e.target;
+  
+  const hash = $(anchor).attr('href');
+  const anchorSection = $(hash);
+  
+  if (!anchorSection) return console.error(`${anchor} - not found`);
+  
+  $("html, body").animate({
+    scrollTop: anchorSection.offset().top
+  }, 1000)
+  
+}
+/* 
+ * -------------------
+*/ 
 
-    //кнопка прокрутка наверх
-  var btn = $(".arrow-up");  
-        $(window).scroll(function() {     
-          if ($(window).scrollTop() > 700) {
-          btn.addClass("arrow-up--show");
-        } else {
-          btn.removeClass("arrow-up--show");
-        }
-        });
-          $(".arrow-up").click(function() {
-          $("body,html").animate({scrollTop:0},700);
-          });
-          
-         //плавный переход по якорю 
-      var $page = $('html, body');
-        $('a[href="#reference"]').click(function() {
-          $page.animate({
-          scrollTop: $($.attr(this, 'href')).offset().top
-        }, 400);
-        return false;
-      });
-      var $page = $('html, body');
-        $('a[href="#theme"]').click(function() {
-          $page.animate({
-          scrollTop: $($.attr(this, 'href')).offset().top
-        }, 500);
-        return false;
-      });
-      var $page = $('html, body');
-        $('a[href="#blog"]').click(function() {
-          $page.animate({
-          scrollTop: $($.attr(this, 'href')).offset().top
-        }, 1000);
-        return false;
-      });
+  //красное сердечко
+  var menuButton = $(".card-reference__heart-img");
+  menuButton.on("click", function () {
+    $(this).toggleClass("card-reference__heart-img--active");
+  });
 
-      //красное сердечко
-        var menuButton = $(".card-reference__heart-img");
-          menuButton.on("click", function () {  
-            $(this).toggleClass("card-reference__heart-img--active");
-        }); 
 
-    
 });
