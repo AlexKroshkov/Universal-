@@ -24,10 +24,10 @@ button
   width: 100%
 
 .invalid
-  font-style: normal
-  font-weight: 300
-  font-size: 12px
-  line-height: 18px
+  color: #EC1F46
+  flex-basis: 100%
+
+.error
   color: #EC1F46
   flex-basis: 100%
 
@@ -39,6 +39,15 @@ img
 
 label
   &.invalid
+    position: absolute
+    left: 0
+    bottom: -14px
+    font-size: 11px
+    line-height: 15px
+    margin-left: 5px
+
+label
+  &.error
     position: absolute
     left: 0
     bottom: -14px

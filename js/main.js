@@ -114,6 +114,27 @@ $(document).ready(function () {
   });
 
 
+  $(".form__modal").each(function () {
+    $(this).validate({
+      errorClass: "error",
+      messages: {
+        name: {
+          required: "Пожалуйста, введите свое имя",
+          minlength: "Слишком короткое имя",
+        },
+        email: {
+          required: "Напишите ваш email",
+          email: "Формат должен быть name@domain.com.",
+        },
+        phone: {
+          required: "Пожалуйста, введите номер телефона",
+          minlength: "Формат должен быть +7 (000) 000-00-00",
+        },
+      },
+    });
+  });
+
+
   //видео
   var player;
   $(".video__play-big").on("click", function onYouTubeIframeAPIReady() {
@@ -159,5 +180,25 @@ function scrollToAnchor(e) {
     $(this).toggleClass("card-reference__heart-img--active");
   });
 
+
+  jQuery(window).scroll(function()
+	{
+		var scroll_top = jQuery(window).scrollTop();
+		
+		if(scroll_top >= 300)
+		{
+			jQuery('[data-btn="toTop"]').addClass('to-top--fixed');
+		}
+		else
+		{
+			jQuery('[data-btn="toTop"]').removeClass('to-top--fixed');
+		}
+	});
+	
+	jQuery('[data-btn="toTop"]').on('click', function(e)
+	{
+		e.preventDefault();
+		jQuery('html, body').animate({scrollTop: 0}, 1000);
+	});
 
 });

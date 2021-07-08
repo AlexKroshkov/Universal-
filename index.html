@@ -149,7 +149,7 @@
 
                     <button class="card-reference__heart">
                       <svg
-                        class="card-reference__heart-img"
+                        class="card-reference__heart-img card-reference__heart-img--pl"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
@@ -294,9 +294,9 @@
                       Купить
                     </button>
 
-                    <button class="card-reference__heart">
+                    <button class="card-reference__heart ">
                       <svg
-                        class="card-reference__heart-img"
+                        class="card-reference__heart-img "
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
@@ -964,6 +964,12 @@
               alt="иконка play"
               class="video__play-big video__img-cap"
             />
+            <img src="images/Bitmap.png" alt class="video__back-bitmap" />
+            <img
+              src="images/play-main-icon.svg"
+              alt="иконка play"
+              class="video__play-big video__img-cap"
+            />
           </div>
           <!-- /.video-main__wrapp -->
         </div>
@@ -1266,7 +1272,7 @@
                     <img
                       src="images/blog-list-1.jpg"
                       alt="фото части здания с видимыми стеллажами в окне"
-                      class="article__image article__image-list"
+                      class="article__image article__image-list article__image-list--img"
                     />
                   </div>
                   <!-- /.item__wrapper -->
@@ -1290,7 +1296,7 @@
                     <img
                       src="images/blog-list-2.jpg"
                       alt="фото посетителе в библиотеке"
-                      class="article__image article__image-list"
+                      class="article__image article__image-list article__image-list--img"
                     />
                   </div>
                   <!-- /.item__wrapper -->
@@ -1313,7 +1319,7 @@
                     <img
                       src="images/blog-list-3.jpg"
                       alt="фото посетителе в библиотеке"
-                      class="article__image article__image-list"
+                      class="article__image article__image-list article__image-list--img"
                     />
                   </div>
                   <!-- /.item-blog__wrapper -->
@@ -1368,7 +1374,7 @@
               <form
                 action="send-2.php"
                 method="POST"
-                class="subscribe subscription__form form"
+                class="subscribe subscription__form form__modal"
               >
                 <input
                   type="email"
@@ -1569,7 +1575,7 @@
             class="modal__close-img"
         /></a>
         <h2 class="modal__title">Заказать книгу</h2>
-        <form action="send.php" method="POST" class="modal__form form">
+        <form action="send.php" method="POST" class="modal__form form ">
           <div class="modal__form-input">
             <input
               type="text"
@@ -1614,6 +1620,8 @@
         </form>
       </div>
     </div>
+
+    <a href="#" class="to-top" data-btn="toTop"><img src="images/angle-up.svg" alt="Наверх"></a>
 
     <script defer src="js/jquery-3.6.0.min.js"></script>
     <script defer src="js/jquery.validate.min.js"></script>
